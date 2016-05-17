@@ -5,7 +5,7 @@
 class CarC : public Frame
 {
 public:
-	CarC(HINSTANCE hInst) : Frame(hInst,L"images/CarC.bmp",470,720,50,100){
+	CarC(HINSTANCE hInst, LPCWSTR path) : Frame(hInst,path,470,720,50,100){
 		this->vX = this->vY = 0;
 		this->vY  = 3; 
 	}
@@ -72,6 +72,14 @@ public:
 			return true;
 		} else {
 			return false;
+		}
+	}
+
+	void stopForAWhile(bool isStop){
+		if(isStop && !(this->getX() > 177 && this->getX() < 633 && this->getY() > 139 && this->getY() < 521)) {
+			this->setVy(0);
+		} else {
+			this->setVy(3);
 		}
 	}
 };

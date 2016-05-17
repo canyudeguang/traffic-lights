@@ -1,10 +1,16 @@
 #pragma once
-#include "Frame.h";
+#include "Frame.h"
+#include "Helper.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
 class CarD : public Frame
 {
+	
 public:
-	CarD(HINSTANCE hInst) : Frame(hInst,L"images/CarD.bmp",-50,400,100,50){
+	
+	CarD(HINSTANCE hInst, LPCWSTR path) : Frame(hInst,path,-50,400,100,50){
 		this->vX = this->vY = 0;
 		this->vX  = 3;
 	}
@@ -32,6 +38,7 @@ public:
 	}
 
 	// setters
+
 	void setX(int x) {
 		this->x = x;
 	}
@@ -70,6 +77,14 @@ public:
 			return true;
 		} else {
 			return false;
+		}
+	}
+
+	void stopForAWhile(bool isStop){
+		if(isStop && !(this->getX() > 157 && this->getX() < 773 && this->getY() > 169 && this->getY() < 651)) {
+			this->setVx(0);
+		} else {
+			this->setVx(3);
 		}
 	}
 };

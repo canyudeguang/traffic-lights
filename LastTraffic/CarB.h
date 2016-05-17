@@ -89,6 +89,13 @@ public:
 		}
 	}
 
+	void stopForAWhile(bool isStop){
+		if(isStop && !!(this->getX() > 157 && this->getX() < 673 && this->getY() > 169 && this->getY() < 551)) {
+			this->setVx(0);
+		} else {
+			this->setVx(-4);
+		}
+	}
 		
 	bool leavedTheSquare() {
 		if (this->getX() > 0 && this->getX() < 197 && this->getY() > 139 && this->getY() < 521)

@@ -66,6 +66,9 @@
     <ClInclude Include="CarManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Pedestrian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -96,6 +99,9 @@
       <Filter>Source Files\Car</Filter>
     </ClCompile>
     <ClCompile Include="CarManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pedestrian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

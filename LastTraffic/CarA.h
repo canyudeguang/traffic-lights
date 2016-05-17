@@ -150,4 +150,12 @@ public:
 	
 	// functioun that manages intersection of carA with other cars
 	
+
+	void stopForAWhile(bool isStop){
+		if(isStop && !(this->getX() > 177 && this->getX() < 633 && this->getY() > 139 && this->getY() < 521)) {
+			this->setVy(0);
+		} else {
+			this->setVy(3);
+		}
+	}
 };

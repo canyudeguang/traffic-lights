@@ -1,22 +1,22 @@
-﻿Build started 5/17/2016 12:08:12 AM.
+﻿Build started 5/17/2016 3:41:13 AM.
      1>Project "C:\Users\Liduta\Desktop\lab-5\LastTraffic\LastTraffic\LastTraffic.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\LastTraffic.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /D _ATL_STATIC_REGISTRY /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\LastTraffic.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CarManager.cpp LastTraffic.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /D _ATL_STATIC_REGISTRY /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\LastTraffic.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CarManager.cpp LastTraffic.cpp Pedestrian.cpp
          CarManager.cpp
      1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\carc.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\card.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\carmanager.h(50): warning C4018: '<=' : signed/unsigned mismatch
+     1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\carmanager.h(62): warning C4018: '<=' : signed/unsigned mismatch
          Generating Code...
          Compiling...
          LastTraffic.cpp
      1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\trafficlightcolors.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
      1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\carc.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\card.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\carmanager.h(50): warning C4018: '<=' : signed/unsigned mismatch
+     1>c:\users\liduta\desktop\lab-5\lasttraffic\lasttraffic\carmanager.h(62): warning C4018: '<=' : signed/unsigned mismatch
          Generating Code...
+         Skipping... (no relevant changes detected)
+         Pedestrian.cpp
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
@@ -32,6 +32,7 @@
          Debug\Frame.obj
          Debug\Helper.obj
          Debug\LastTraffic.obj
+         Debug\Pedestrian.obj
          Debug\stdafx.obj
          Debug\TrafficLight.obj
        Manifest:
@@ -47,4 +48,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.22
+Time Elapsed 00:00:03.59
