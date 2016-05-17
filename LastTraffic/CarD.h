@@ -63,6 +63,14 @@ public:
 		}
 	}
 
+	bool isAtRed(Helper* mainHelper) {
+		if (this->getX() > 115 && this->getX() < 125 && this->getY() > 235 && this->getY() < 442 && mainHelper->getActiveRoad()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	bool checkInFront(CarD* carD) {
 		if (carD->x - this->x <= 125) {
 			return false;

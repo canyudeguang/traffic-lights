@@ -54,32 +54,6 @@ public:
 		this->vY = _v;
 	}
 
-	/*bool checkCarsInTheSquare(vector<CarA>& carAvector, vector<CarC*> carCvector, vector<CarD*> carDvector) {
-		bool isInTheSquare = false; 
-
-		// check for carB
-		for(std::vector<CarA*>::size_type i = 0; i != carAvector.size(); i++) {
-			if (carAvector[i]->getX() > 177 && carAvector[i]->getX() < 633 && carAvector[i]->getY() > 139 && carAvector[i]->getY() < 521) {
-				isInTheSquare = true;
-			}
-		}	
-
-		// check for carC
-		for(std::vector<CarC*>::size_type i = 0; i != carCvector.size(); i++) {
-			if (carCvector[i]->getX() > 177 && carCvector[i]->getX() < 633 && carCvector[i]->getY() > 139 && carCvector[i]->getY() < 521) {
-				isInTheSquare = true;
-			}
-		}	
-
-		// check for carD
-		for(std::vector<CarD*>::size_type i = 0; i != carDvector.size(); i++) {
-			if (carDvector[i]->getX() > 177 && carDvector[i]->getX() < 633 && carDvector[i]->getY() > 139 && carDvector[i]->getY() < 521) {
-				isInTheSquare = true;
-			}
-		}	
-		return isInTheSquare;
-	}*/
-
 	bool isInTheSquare() {
 		if (this->getX() > 177 && this->getX() < 633 && this->getY() > 139 && this->getY() < 521)
 		{
@@ -122,8 +96,16 @@ public:
 		}
 	}
 
+	bool isAtRed(Helper* mainHelper) {
+		if (this->getX() > 660 && this->getX() < 680 && this->getY() > 235 && this->getY() < 442 && mainHelper->getActiveRoad()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	bool checkInFront(CarB* carB) {
-		if (this->x - carB->x <= 125) {
+		if (this->x - carB->x <= 225) {
 			return false;
 		} else {
 			return true;

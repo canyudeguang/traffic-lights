@@ -79,9 +79,18 @@ public:
 		}
 	}
 
+	bool isAtRed(Helper* mainHelper) {
+		if (this->getX() > 181 && this->getX() < 635 && this->getY() > 82 && this->getY() < 100 && !mainHelper->getActiveRoad()) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+
 
 	bool checkInFront(CarA* carA) {
-		if (carA->y - this->y <= 135) {
+		if (carA->y - this->y <= 235) {
 			return false;
 		} else {
 			return true;
@@ -158,4 +167,17 @@ public:
 			this->setVy(3);
 		}
 	}
+
+	/*bool stopIfB(vector<CarB*> _carBvector) {
+		bool carBinTheSquare = false;
+		for (int j = 0; j <= _carBvector.size(); j++) {
+			carBinTheSquare = _carBvector[j]->isInTheSquare();
+			if(carBinTheSquare) {
+				break;
+			} else {
+				carBinTheSquare = false;
+			}
+		}
+		return carBinTheSquare;
+	}*/
 };

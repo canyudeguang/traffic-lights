@@ -57,6 +57,14 @@ public:
 		}
 	}
 
+	bool isAtRed(Helper* mainHelper) {
+		if (this->getX() > 267 && this->getX() < 535 && this->getY() > 545 && this->getY() < 575 && !mainHelper->getActiveRoad()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 
 	bool checkInFront(CarC* carC) {
 		if (this->y - carC->y <= 125) {

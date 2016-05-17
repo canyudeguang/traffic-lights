@@ -11,9 +11,9 @@ class Pedestrian : public Frame
 private:
 	bool active;
 public:
-	Pedestrian(HINSTANCE hInst) : Frame(hInst,L"images/pedestrian.bmp",200,170,50,50){
+	Pedestrian(HINSTANCE hInst) : Frame(hInst,L"images/pedestrian.bmp",210,210,35,35){
 		this->vX = this->vY = 0;
-		this->vX  = 7;
+		this->vY  = 3;
 		active = true;
 	}
 
@@ -57,6 +57,14 @@ public:
 
 	void setVy(int _v) {
 		this->vY = _v;
+	}
+
+	void stopAtRed(CarA* carA, Helper* mainHelper) {
+		if (!carA->isAtRed(mainHelper)) {
+			this->vY= 0;
+		} else {
+			this->vY = 3;
+		}
 	}
 
 };
